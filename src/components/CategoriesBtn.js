@@ -1,29 +1,40 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
+import { CategoriesContext } from "../context/CategoriesProvider";
 import { getCategories } from "../services/api";
 
 
 function CategoriesBtn() {
 
-  let [categories, setCategories] = useState([])
+  let [allCategories, setAllCategories] = useState([])
+  const {setCategoryId, setCategoryName} = useContext(CategoriesContext)
+
   useEffect(()=> {
     async function getAPI(){
       const catData = await getCategories()
-      setCategories(catData)
-      console.log(categories);
+      setAllCategories(catData)
     }
     getAPI();
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
+  function handleClick(target) {
+    setCategoryId(target.value)
+    setCategoryName(target.name)
+  }
+
   return (
     <div>
         <select
-          id="selectBtn">
+          id="selectBtn"
+          onClick={(e) => handleClick(e.target)}
+        >
+          
         {
-          categories && categories.map((elem)=> (
+          allCategories && allCategories.map((elem)=> (
             <option
-              value={elem.name}
+              value={elem.id}
               key={elem.id}
+              name={elem.name}
             >
               {elem.name}
             </option>

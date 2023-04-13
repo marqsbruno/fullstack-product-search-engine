@@ -8,8 +8,8 @@ export async function getCategories() {
 }
 
 
-export async function filterCategories(categoryId) {
-  const url = `https://api.mercadolibre.com/sites/$SITE_ID/search?category=${categoryId}`;
+export async function getOneCategoy(categoryId) {
+  const url = `https://api.mercadolibre.com/sites/MLB/search?category=${categoryId}`;
 
   const result = await fetch(url);
   const data = result.json();
