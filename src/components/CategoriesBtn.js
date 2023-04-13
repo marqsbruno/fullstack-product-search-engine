@@ -1,5 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import { CategoriesContext } from "../context/CategoriesProvider";
+import { SearchContext } from "../context/SearchProvider";
 import { getCategories } from "../services/api";
 
 
@@ -7,6 +8,7 @@ function CategoriesBtn() {
 
   let [allCategories, setAllCategories] = useState([])
   const {setCategoryId, setCategoryName} = useContext(CategoriesContext)
+  const {setFilteredData} = useContext(SearchContext)
 
   useEffect(()=> {
     async function getAPI(){
@@ -20,6 +22,7 @@ function CategoriesBtn() {
   function handleClick(target) {
     setCategoryId(target.value)
     setCategoryName(target.name)
+    setFilteredData([])
   }
 
   return (

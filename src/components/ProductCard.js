@@ -8,8 +8,9 @@ function ProductCard(products) {
 
     const {thumbnail, title, price, permalink} = products.data
 
-    console.log(products.data);
+    // console.log(products.data);
 
+    // Lógica -> se tiver vazio na searchBar ele renderiza o Products.data
   return (
     <div>
       <img src={thumbnail} alt={title}/>
