@@ -10,14 +10,14 @@ function ProductCard(products) {
 
     // console.log(products.data);
 
-    // Lógica -> se tiver vazio na searchBar ele renderiza o Products.data
+
   return (
     <div>
       <img src={thumbnail} alt={title}/>
       <h4>{title}</h4>
       <p>{categoryName}</p>
       <h3>{`R$ ${price}`}</h3>
-      <p>{permalink}</p>
+      <a className="btn btn-secondary" href={permalink} target="__blanck"> Ir a web</a>
     </div>
     
   )

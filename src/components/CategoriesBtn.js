@@ -31,6 +31,7 @@ function CategoriesBtn() {
           id="selectBtn"
           onClick={(e) => handleClick(e.target)}
         >
+          <option>Categorias</option>
           
         {
           allCategories && allCategories.map((elem)=> (

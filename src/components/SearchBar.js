@@ -5,7 +5,7 @@ import { SearchContext } from "../context/SearchProvider";
 
 function SearchBar() {
 
-  let [inputSearch, setInputSearch ] = useState([])
+  let [inputSearch, setInputSearch ] = useState()
 
   const {categoryData} = useContext(CategoriesContext)
   const {setFilteredData} = useContext(SearchContext)
@@ -16,9 +16,11 @@ function SearchBar() {
   }
 
   function handleClick() {
+    if (inputSearch) {
     // filtra os dados da busca por categoria com o input
     const resultData = categoryData.filter((item) => item.title.toLowerCase().includes(inputSearch.toLowerCase()))
     setFilteredData(resultData)
+    }
   }
 
   return (
@@ -27,6 +29,7 @@ function SearchBar() {
         id="search"
         onChange={handleChange}
         value={inputSearch}
+        placeholder="Filtrar"
       >
       </input>
       <button
