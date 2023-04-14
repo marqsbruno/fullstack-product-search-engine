@@ -26,7 +26,7 @@ function CategoriesBtn() {
   }
 
   return (
-    <div>
+    <div className="m-5">
         <select
           id="selectBtn"
           onClick={(e) => handleClick(e.target)}

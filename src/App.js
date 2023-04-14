@@ -1,4 +1,4 @@
-import './App.css';
+// import './App.css';
 import CategoriesProvider from './context/CategoriesProvider';
 import SearchProvider from './context/SearchProvider';
 import Home from './pages/Home';

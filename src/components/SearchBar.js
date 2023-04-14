@@ -24,7 +24,7 @@ function SearchBar() {
   }
 
   return (
-    <div>
+    <div className="m-3">
       <input
         id="search"
         onChange={handleChange}

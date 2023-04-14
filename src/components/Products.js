@@ -10,7 +10,7 @@ function Products() {
   const {filteredData} = useContext(SearchContext)
 
   return (
-    <div>
+    <div className="container">
       { 
         filteredData.length === 0 ? (
         categoryData.map((elem, i) => (
