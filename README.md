@@ -8,6 +8,10 @@ Este projeto conecta a API do mercado livre, podendo filtrar produtos por catego
 - Context React
 - Bootstrap
 
+## Link de acesso
+
+https://fullstack-product-search-engine.vercel.app/
+
 ## Autor 👥
 
 [![linkedin](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](<https://www.linkedin.com/in/marques-bruno/](https://www.linkedin.com/in/marques-bruno/)>)
