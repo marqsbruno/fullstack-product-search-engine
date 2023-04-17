@@ -2,7 +2,7 @@
 
 Este projeto conecta a API do mercado livre, podendo filtrar produtos por categoria e nome.
 
-## Técnologias usadas 🛠
+## Tecnologias usadas 🛠
 
 - React.JS
 - Context React
