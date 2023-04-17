@@ -5,7 +5,7 @@ import SearchBar from "./SearchBar";
 function Header() {
 
   return (
-    <div className="d-flex align-items-center">
+    <div className="d-flex align-items-center justify-content-center container">
       <CategoriesBtn />
       <SearchBar />
     </div>

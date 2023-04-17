@@ -26,12 +26,12 @@ function CategoriesBtn() {
   }
 
   return (
-    <div className="m-5">
+    <div className="m-3">
         <select
-          id="selectBtn"
+          className="form-select"
           onClick={(e) => handleClick(e.target)}
         >
-          <option>Categorias</option>
+          <option>Selecione uma categoria</option>
           
         {
           allCategories && allCategories.map((elem)=> (
